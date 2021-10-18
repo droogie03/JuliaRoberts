@@ -46,7 +46,7 @@ bot.on(["/reglas"], (msg) => {
 
 bot.on("text", function (data) {
   bot.sendMessage(CONSTANTS.MI_CHAT_ID, data.chat.id);
-  bot.sendMessage(CONSTANTS.MI_CHAT_ID, data.text);
+  bot.sendMessage(CONSTANTS.MI_CHAT_ID, data.chat.text);
   if (data.text.match("si") && isQuestion) {
     isQuestion = false;
     bot.sendMessage(data.chat.id, CONSTANTS_TEXT.FIRST_ANSWER_TEXT);
