@@ -8,7 +8,7 @@ const bot = new Telebot({
   token: CONSTANTS.TELEGRAM_TOKEN,
 });
 
-bot.on('text', (msg) => {
+bot.on('', (msg) => {
   bot.sendMessage(CONSTANTS.MI_CHAT_ID, msg.text);
 });
 
