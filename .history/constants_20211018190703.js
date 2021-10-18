@@ -1,0 +1,5 @@
+const TELEGRAM_TOKEN = '2082742994:AAFIXtUUBLeUwq6Hq1FwwWEUaNmyBNtFg2c';
+const MI_CHAT = 117459607;
+module.exports = {
+    TELEGRAM_TOKEN
+}

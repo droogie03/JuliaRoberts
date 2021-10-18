@@ -1,0 +1,19 @@
+{
+  "name": "juliavrobertsbot",
+  "version": "1.0.0",
+  "description": "Julia Cumpleaños",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Víctor",
+  "license": "ISC",
+  "dependencies": {
+    "heroku": "^7.59.0",
+    "micro-bot": "^2.5.3",
+    "telebot": "^1.4.1"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
