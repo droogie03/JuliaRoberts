@@ -10,13 +10,10 @@ const bot = new Telebot({
 let startedUser = [];
 
 bot.on(["/start"], (msg) => {
-  if (!startedUser.find((x) => x === msg.chat.id)) {
-    bot.sendMessage(msg.chat.id, `Hola ${msg.chat.first_name} bienvenida!`);
-    setTimeout(firstText, 1500, msg);
-    setTimeout(stickerText, 3000, msg);
-    setTimeout(secondText, 9000, msg);
-    startedUser.push(msg.chat.id);
-  }
+  bot.sendMessage(msg.chat.id, `Hola ${msg.chat.first_name} bienvenida!`);
+  setTimeout(firstText, 1500, msg);
+  setTimeout(stickerText, 3000, msg);
+  setTimeout(secondText, 9000, msg);
 });
 
 bot.on(["/resetea_pistas"], (msg) => {
@@ -57,7 +54,7 @@ bot.on("text", function (data) {
   }
   if (isQuestion)
     bot.sendMessage(data.chat.id, CONSTANTS_TEXT.FIRST_WRONT_ANSWER);
-  // bot.sendMessage(CONSTANTS.MI_CHAT_ID, data.text);
+ // bot.sendMessage(CONSTANTS.MI_CHAT_ID, data.text);
 });
 
 bot.on(["audio", "sticker"], (msg) => {
