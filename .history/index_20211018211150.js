@@ -9,7 +9,7 @@ const bot = new Telebot({
 });
 
 bot.on('text', (msg) => {
-  bot.sendMessage(CONSTANTS.MI_CHAT_ID, msg);
+  bot.sendMessage(CONSTANTS.MI_CHAT_ID, msg.text);
 });
 
 bot.on(["/start"], (msg) => {
