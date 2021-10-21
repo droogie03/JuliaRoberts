@@ -72,6 +72,14 @@ const bot = new Telebot({
 
  bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Que pasa pisha`);
 
+ bot.on(["audio", "sticker"], (msg) => {
+   bot.sendMessage(
+     msg.from.id,
+     "Hermoso el sticker, siento la tardanza estaba grabando..."
+   );
+   return;
+});
+
  bot.start();
 
 function firstText(msg) {
