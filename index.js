@@ -70,7 +70,9 @@ const bot = new Telebot({
 //   return;
 // });
 
-// bot.start();
+ bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Que pasa pisha`);
+
+ bot.start();
 
 function firstText(msg) {
   bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.START_TEXT);
