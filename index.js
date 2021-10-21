@@ -70,31 +70,42 @@ const bot = new Telebot({
 //   return;
 // });
 
- bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Que pasa pisha`);
+bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Que pasa pisha`);
+bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Que pasa pisha, quieres alguna pista o no?`);
+bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Si ves que no respondo esq estoy un poco ocupada con mis cosas de famosa y mis peliculas, debes escribirme al correo que te envie este chat.`);
+bot.sendMessage(CONSTANTS.MI_CHAT_ID, `Bueno estas ready?`);
 
- bot.on(["audio", "sticker"], (msg) => {
-   bot.sendMessage(
-     msg.from.id,
-     "Hermoso el sticker, siento la tardanza estaba grabando..."
-   );
-   return;
+bot.on(["audio", "sticker"], (msg) => {
+  try {
+    bot.sendMessage(
+      CONSTANTS.MI_CHAT_ID,
+      "Hermoso el sticker, siento la tardanza estaba grabando..."
+    );
+    return;
+  } catch {
+    bot.sendMessage(
+      CONSTANTS.MI_CHAT_ID,
+      "Hermoso el sticker, siento la tardanza estaba grabando..."
+    );
+    return;
+  }
 });
 
- bot.start();
+bot.start();
 
-function firstText(msg) {
-  bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.START_TEXT);
-}
+// function firstText(msg) {
+//   bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.START_TEXT);
+// }
 
-function stickerText(msg) {
-  msg.reply.photo(CONSTANTS.IMG_MUPPET, { asReply: false });
-}
+// function stickerText(msg) {
+//   msg.reply.photo(CONSTANTS.IMG_MUPPET, { asReply: false });
+// }
 
-function secondText(msg) {
-  isQuestion = true;
-  bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.SECOND_TEXT);
-}
+// function secondText(msg) {
+//   isQuestion = true;
+//   bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.SECOND_TEXT);
+// }
 
-function thirdText(msg) {
-  bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.THIRD_TEXT);
-}
+// function thirdText(msg) {
+//   bot.sendMessage(msg.chat.id, CONSTANTS_TEXT.THIRD_TEXT);
+// }
